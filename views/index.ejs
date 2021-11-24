@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongoose Dashboard</title>
+</head>
+<body>
+    <h1>Nuestra Lista de Mongooses</h1> 
+    <div>
+        <% for (i=0; i<mongooses.length; i++) { %>
+            <p>
+                <a href="/mongooses/edit/<%=mongooses[i]._id %>"><%= mongooses[i].mName %> <%= mongooses[i].age %> </a>
+            </p>
+        <% } %>
+    </div>
+    <div>
+        <a href="/mongoose/new">
+            <button>
+                Add New Mongoose
+            </button>
+        </a>
+    </div>
+</body>
+</html>
